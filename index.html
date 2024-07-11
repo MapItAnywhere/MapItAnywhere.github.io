@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel = "icon" href = "assets/map.png" type = "image/x-icon">
+
+  <meta charset="utf-8">
+  <meta name="description" content="Map It Anywhere: Empowering BEV Map Prediction using Large-scale Public Dataset">
+  <meta name="keywords" content="MIA, Mapper, Mapillary, OpenStreetMap, BEV, Maps, Semantic Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/splash.jpg" />
+  <title>Map It Anywhere</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"></script>
+    <style>
+      .mia {
+        font-family: monospace;
+        font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://mapitanywhere.github.io/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Map It Anywhere: Empowering BEV Map Prediction using Large-scale
+              Public Datasets</h1>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <a href="https://cherieho.com/">Cherie Ho</a>*<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/tonyjzou/">Jiaye Zou</a>*<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/omaralama/">Omar Alama</a>*<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://smj007.github.io/">Sai Mitheran Jagadesh Kumar</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/chychiang">Benjamin Chiang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/taneesh-gupta/">Taneesh Gupta</a><sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="https://sairlab.org/team/chenw/">Chen Wang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://nik-v9.github.io/">Nikhil Keetha</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.cmu.edu/~./katia/">Katia Sycara</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://theairlab.org/team/sebastian/">Sebastian Scherer</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>Carnegie Mellon University</span>
+              <span class="author-block"><sup>2</sup>University at Buffalo</span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              * Equal Contribution
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="assets/MapItAnywhere.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/MapItAnywhere/MapItAnywhere"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/MapItAnywhere/MapItAnywhere/blob/main/mia/dataset.md" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+              <!-- Hugging Face Data Engine Link. -->
+              <span class="link-block">
+                <a href="https://mapitanywhere-dataengine.hf.space" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-lightbulb"></i>
+                  </span>
+                  <span>Data Engine Demo</span>
+                </a>
+              </span>
+              <!-- Hugging Face Map Predictor Link. -->
+              <span class="link-block">
+                <a href="https://mapitanywhere-mapper.hf.space" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-lightbulb"></i>
+                  </span>
+                  <span>Map Prediction Demo</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/abstract_figure.svg" />
+        <h2 class="subtitle has-text-centered">
+          Our <b>M</b>ap <b>I</b>t <b>A</b>nywhere (<b><tt>MIA</tt></b>) data engine empowers <b>generalizable</b>
+          Bird's Eye View (BEV) map prediction from First-Person View (FPV) images.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Top-down Bird's Eye View (BEV) maps are a popular representation for ground robot navigation due to their
+              richness and flexibility for downstream tasks.
+              While recent methods have shown promise for predicting BEV maps from First-Person View (FPV) images, their
+              generalizability is limited to small regions captured by current autonomous vehicle-based datasets.
+              In this context, we show that a more scalable approach towards generalizable map prediction can be enabled
+              by using two large-scale crowd-sourced mapping platforms, Mapillary for FPV images and OpenStreetMap for
+              BEV semantic maps.
+            </p>
+            <p>
+              We introduce <b>M</b>ap <b>I</b>t <b>A</b>nywhere (<b><tt>MIA</tt></b>), a data engine that enables seamless
+              curation and modeling of labeled map prediction data from existing open-source map platforms.
+              Using our <b><tt>MIA</tt></b> data engine, we display the ease of <b>automatically</b> collecting a <b>1.2
+                million</b> FPV & BEV pair dataset encompassing diverse geographies, landscapes, environmental factors,
+              camera models & capture scenarios.
+              We further train a simple camera model-agnostic model on this data for BEV map prediction.
+              Extensive evaluations using established benchmarks and our dataset show that the data curated by
+              <b><tt>MIA</tt></b> enables <b>effective pretraining for generalizable BEV map prediction</b>, with
+              zero-shot performance far exceeding baselines trained on existing datasets by 35%.
+              Our analysis highlights the promise of using large-scale public maps for developing & testing
+              generalizable BEV perception, paving the way for more robust autonomous navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section" id="Data Engine Demo">
+    <h2 class="title is-3">Data Engine Demo (Try with different locations!)</h2>
+    <gradio-app src="https://mapitanywhere-dataengine.hf.space" theme_mode="light"></gradio-app>
+  </section>
+
+  <section class="section" id="Prediction Demo">
+    <h2 class="title is-3">Map Prediction Demo (Try taking a picture with your phone!)</h2>
+    <gradio-app src="https://mapitanywhere-mapper.hf.space" theme_mode="light"></gradio-app>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{ho2024map,
+          title={Map It Anywhere: Empowering BEV Map Prediction using Large-scale Public Datasets},
+          author={Ho, Cherie and Zou, Jiaye and Alama, Omar and Kumar, Sai Mitheran Jagadesh and Chiang, Benjamin and Gupta, Taneesh and Wang, Chen and Keetha, Nikhil and Sycara, Katia and Scherer, Sebastian},
+          journal={arXiv preprint},
+          year={2024}
+        }
+      </code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from the Nerfies template, which is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              If you use the <a href="https://github.com/MapItAnywhere/MapItAnywhere.github.io">source code</a> of this
+              website, please also link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies
+                source code</a> in your footer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
