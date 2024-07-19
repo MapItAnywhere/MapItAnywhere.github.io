@@ -190,18 +190,22 @@
     </div>
   </section>
 
+  <!-- Teaser Video. -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/abstract_figure.svg" />
+        <video id="mia_teaser" autoplay controls muted loop playsinline height="100%">
+          <source src="./assets/mia_teaser_0719.mp4" type="video/mp4">
+        </video>
+        <!-- </video> -->
         <h2 class="subtitle has-text-centered">
           Our <b>M</b>ap <b>I</b>t <b>A</b>nywhere (<b><tt>MIA</tt></b>) data engine empowers <b>generalizable</b>
-          Bird's Eye View (BEV) map prediction from First-Person View (FPV) images.
+          Bird's Eye View (BEV) map predictions from First-Person View (FPV) images.
         </h2>
       </div>
     </div>
   </section>
-
+  <!--/ Teaser video. -->
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -237,29 +241,90 @@
       </div>
       <!--/ Abstract. -->
 
-      <!-- Paper video. -->
-      <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src=""
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <section class="hero abstract_fig">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <img src="static/images/abstract_figure.svg" />
+          </div>
         </div>
-      </div>
-    </div> -->
-      <!--/ Paper video. -->
+      </section>
     </div>
   </section>
 
   <section class="section" id="Data Engine Demo">
+    <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Data Engine Demo (Try with different locations!)</h2>
+    </div>
     <gradio-app src="https://mapitanywhere-dataengine.hf.space" theme_mode="light"></gradio-app>
   </section>
 
   <section class="section" id="Prediction Demo">
+    <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Map Prediction Demo (Try taking a picture with your phone!)</h2>
+    </div>
     <gradio-app src="https://mapitanywhere-mapper.hf.space" theme_mode="light"></gradio-app>
   </section>
+
+  <section class="hero is-small is-light">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Showing MIA Data Engine's Utility: Sampling the MIA dataset</h2>
+          <div class="content has-text-centered">
+            <p>
+              We show the utility of the MIA data engine by sampling six different urban-centered locations, extending to the suburbs. We selected highly populated cities - New York, Chicago, Houston, and Los Angeles - to collect challenging scenarios with diverse and dense traffic. Additionally, we included Pittsburgh and San Francisco for their unique topologies. More details and download links for the dataset can be found in the <a href="https://github.com/MapItAnywhere/MapItAnywhere/blob/main/mia/dataset.md" class="external-link">dataset page</a>. 
+              <img src="./assets/fpv_diversity.svg" />
+              Samples from the MIA dataset: Highlighting diversity in time of day, seasons, weather and capture scenarios from
+              vehicles & pedestrians.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="hero is-small is-white">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">In-the-Wild Map Predictions in Untrained Cities</h2>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-5">Pittsburgh</h2>
+            <video id="ns_r0" autoplay controls muted loop playsinline height="100%">
+              <source src="./assets/output_pgh_day_0.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-5">Seattle</h2>
+            <video id="ps_r0" autoplay controls muted loop playsinline height="100%">
+              <source src="./assets/output_seattle_0.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="title is-5">Zurich</h2>
+            <video id="ss_r0" autoplay controls muted loop playsinline height="100%">
+              <source src="./assets/output_zurich_night.mp4" type="video/mp4">
+            </video>
+            <!-- <img src = "data/viz_gifs/row3_col3.gif"> -->
+          </div>
+        </div>
+      </div>
+
+</section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
