@@ -140,16 +140,6 @@
                     <span>arXiv</span>
                   </a>
                 </span>
-                <!-- Video Link. -->
-                <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
                 <!-- Code Link. -->
                 <span class="link-block">
                   <a href="https://github.com/MapItAnywhere/MapItAnywhere"
@@ -169,6 +159,15 @@
                     <span>Data</span>
                   </a>
               </div>
+              <!-- Thread Link. -->
+              <span class="link-block">
+                <a href="https://x.com/Nik__V__/status/1731840557553496410?s=20" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Thread</span>
+                </a>
+              </span>
               <!-- Hugging Face Data Engine Link. -->
               <span class="link-block">
                 <a href="https://mapitanywhere-dataengine.hf.space" class="external-link button is-normal is-rounded is-dark">
@@ -248,7 +247,7 @@
       <section class="hero abstract_fig">
         <div class="container is-max-desktop">
           <div class="hero-body">
-            <img src="static/images/abstract_figure.svg" />
+            <img src="static/images/mia_summary.jpg" />
           </div>
         </div>
       </section>
@@ -267,6 +266,22 @@
     <h2 class="title is-3">Map Prediction Demo (Try taking a picture with your phone!)</h2>
     </div>
     <gradio-app src="https://mapitanywhere-mapper.hf.space" theme_mode="light"></gradio-app>
+  </section>
+
+  <section class="hero is-small is-white">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">MIA Data Engine automatically curates FPV-BEV pairs worldwide</h2>
+          <div class="content has-text-justified">
+            <p>
+              <img src="./static/images/mia_data_engine.jpg" />
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
   </section>
 
   <section class="hero is-small is-light">
@@ -338,7 +353,7 @@
           <h2 class="title is-3">Acknowledgments</h2>
           <div class="content has-text-centered">
             <p>
-              This work is built on the incredible efforts of the community. Shout out to Paul-Edouard Sarlin and his inspiring work, OrienterNet, which uses
+              This work is built on the incredible efforts of the community. Shout out to Paul-Edouard Sarlin and his inspiring work, <a href="https://github.com/facebookresearch/OrienterNet">OrienterNet</a>, which uses
               Mapillary and OSM for visual localization and serves as the foundation of our work. We also extend our gratitude to
               Mapillary, OpenStreetMap, and their contributors for providing the data that powers our work.
             </p>
